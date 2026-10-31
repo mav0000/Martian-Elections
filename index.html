@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martian Elections</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f3f5f9;
+            color: #202b3c;
+        }
+
+        header {
+            background: #172b49;
+            color: white;
+            padding: 24px 7%;
+        }
+
+        header h1 {
+            font-size: 28px;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            color: #bdcce0;
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        nav {
+            background: #223b60;
+            padding: 14px 7%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #9fc5ff;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 35px auto;
+            padding: 0 20px;
+        }
+
+        .welcome {
+            margin-bottom: 30px;
+        }
+
+        .welcome h2 {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .welcome p {
+            color: #687589;
+        }
+
+        .section-title {
+            font-size: 19px;
+            margin-bottom: 16px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 22px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            font-size: 15px;
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .number {
+            font-size: 30px;
+            font-weight: bold;
+            color: #244d83;
+        }
+
+        .subtitle {
+            color: #8490a0;
+            font-size: 13px;
+            margin-top: 7px;
+        }
+
+        .election {
+            margin-top: 30px;
+        }
+
+        .result {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 13px 0;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .result:last-child {
+            border-bottom: none;
+        }
+
+        .party {
+            font-weight: bold;
+        }
+
+        .vote {
+            color: #64748b;
+            text-align: right;
+        }
+
+        .blue { color: #3978c5; }
+        .red { color: #d64b4b; }
+        .gold { color: #c39226; }
+        .purple { color: #8c65b5; }
+
+        footer {
+            background: #172b49;
+            color: #bdcce0;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+            font-size: 13px;
+        }
+
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 23px;
+            }
+
+            nav {
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>MARTIAN ELECTIONS</h1>
+    <p>THE MARTIAN ELECTORAL DATABASE</p>
+</header>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="#presidential">Presidential</a>
+    <a href="#assembly">Assembly</a>
+    <a href="#parties">Parties</a>
+    <a href="#archive">Archive</a>
+</nav>
+
+<main>
+
+    <section class="welcome">
+        <h2>Welcome to Martian Elections</h2>
+        <p>Your central database for Martian politics and elections.</p>
+    </section>
+
+    <h2 class="section-title">Election Overview</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>Latest Presidential Election</h3>
+            <div class="number">1106</div>
+            <p class="subtitle">Martian Presidential Election</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Presidential Votes</h3>
+            <div class="number">2,293,008</div>
+            <p class="subtitle">Votes cast</p>
+        </div>
+
+        <div class="card">
+            <h3>Assembly Seats</h3>
+            <div class="number">96</div>
+            <p class="subtitle">Total seats</p>
+        </div>
+
+    </div>
+
+    <section class="election" id="presidential">
+
+        <h2 class="section-title">1106 Presidential Election</h2>
+
+        <div class="card">
+
+            <div class="result">
+                <span class="party blue">Jacson Morgan (U-COM)</span>
+                <span class="vote">52.7% · 1,208,982</span>
+            </div>
+
+            <div class="result">
+                <span class="party red">Saylor Knight (D)</span>
+                <span class="vote">38.9% · 891,340</span>
+            </div>
+
+            <div class="result">
+                <span class="party gold">Mahmud al-Irani (Sa)</span>
+                <span class="vote">6.3% · 143,412</span>
+            </div>
+
+            <div class="result">
+                <span class="party purple">Prince Jonathan I (MSP)</span>
+                <span class="vote">2.1% · 49,274</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="election" id="assembly">
+
+        <h2 class="section-title">1106 Assembly Election</h2>
+
+        <div class="card">
+
+            <div class="result">
+                <span class="party blue">Democratic</span>
+                <span class="vote">37 seats</span>
+            </div>
+
+            <div class="result">
+                <span class="party red">Union-Communist</span>
+                <span class="vote">32 seats</span>
+            </div>
+
+            <div class="result">
+                <span class="party gold">Salaam</span>
+                <span class="vote">11 seats</span>
+            </div>
+
+            <div class="result">
+                <span class="party purple">Monarchist-Socialist</span>
+                <span class="vote">7 seats</span>
+            </div>
+
+            <div class="result">
+                <span class="party">Martian Communist</span>
+                <span class="vote">6 seats</span>
+            </div>
+
+            <div class="result">
+                <span class="party">Joseph Smith's Christians</span>
+                <span class="vote">3 seats</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="election" id="parties">
+        <h2 class="section-title">Political Parties</h2>
+
+        <div class="grid">
+            <div class="card">
+                <h3>U-COM</h3>
+                <p>Union-Communist Party</p>
+            </div>
+
+            <div class="card">
+                <h3>D</h3>
+                <p>Democratic Party</p>
+            </div>
+
+            <div class="card">
+                <h3>S</h3>
+                <p>Salaam</p>
+            </div>
+
+            <div class="card">
+                <h3>MSP</h3>
+                <p>Monarchist-Socialist Party</p>
+            </div>
+
+            <div class="card">
+                <h3>MARCOM</h3>
+                <p>Martian Communist Party</p>
+            </div>
+
+            <div class="card">
+                <h3>JSC</h3>
+                <p>Joseph Smith's Christians</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="election" id="archive">
+        <h2 class="section-title">Election Archive</h2>
+        <div class="card">
+            <p>1106 — Presidential and Assembly Elections</p>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    Martian Elections · The Martian Electoral Database
+</footer>
+
+</body>
+</html>
